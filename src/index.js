@@ -4,24 +4,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
-
-
 import './index.css';
-import App from './App';
+
 import * as serviceWorker from './serviceWorker';
 
+import Routes from './routes';
 
-
-//routes
-import Core from './components/core';
 
 const routing = (
-    <Router>
+    <Router forceRefresh={false}>
         <div>
-            <Route path="/" component={Core} />
+            <Routes/>
         </div>
     </Router>
-)
+);
+
+
 
 ReactDOM.render(routing , document.getElementById('root'));
 

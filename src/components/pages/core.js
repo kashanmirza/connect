@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
-import Footer from './common/Footer'
-import Header from './common/Header'
+import Footer from '../common/Footer'
+import Header from '../common/Header'
 
-import App from '../App';
+import App from '../../App';
 
 let style = {
     width:"100%",
@@ -26,7 +26,7 @@ class Dashboard extends Component {
 
     click = () => {
         alert("hello");
-    }
+    };
 
     render() {
         return (
@@ -34,11 +34,7 @@ class Dashboard extends Component {
                <Header/>
 
                 <div style={style}>
-                        <Router>
-                            <div className="container">
-                                <Route path="/" component={App} />
-                            </div>
-                        </Router>
+                    <App/>
                 </div>
 
                 <Footer/>
