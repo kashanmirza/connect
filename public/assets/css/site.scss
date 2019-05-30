@@ -1,0 +1,72 @@
+@import "../../../src/components/customComponent/tabBar/TabBar.scss";
+@import "../../../src/components/customComponent/card/Card.scss";
+
+$secondary-color : #26ade3;
+$primary-color: #1dadeb;
+$common-color: #ffffff;
+$center-text-align : center;
+
+
+.container{
+    width :100%
+}
+
+.card-image{
+    width:20px;
+    height: 20px;
+}
+
+.btn-rounded {
+    line-height: 15px;
+    background-color: $primary-color ;
+    border-radius:50%;
+    transition: all 0.3s ease 0s;
+}
+
+@mixin font {
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn-font {
+    @include font;
+    font-size:12px;
+    color:$common-color;
+}
+
+.card-img{
+    width: 175px;
+    height: 88px;
+    object-fit: contain;
+}
+
+
+.tab-pane {
+    display: block;
+    opacity: 1 !important;;
+}
+
+.tab-content>.active {
+    display: block;
+    opacity:1;
+}
+
+
+.card{
+    border: solid 1px #e2e7ea;
+    border-radius: 8px;
+    .card-header{
+        background-color: $common-color;
+        border-bottom-color: #e2e7ea;
+    }
+}
+
+
+

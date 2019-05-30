@@ -1,0 +1,51 @@
+$btn-primary-color: #1dadeb;
+$btn-recommended-color : #f5ce00;
+$btn-subscribe-color : rgba(38, 186, 126, 0.2);
+$btn-notApplicable-color : rgba(154, 154, 154, 0.2);
+$default-color : #ffffff;
+
+@mixin btn-default{
+  width:220px;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 7px;
+  border: 0px;
+  font-size: 11px;
+  width: -webkit-fill-available;
+  .fa {
+    padding-left: 8px;
+    .fa-lg {
+      line-height: .25em;
+    }
+  }
+}
+
+.btn-primary{
+ @include btn-default;
+  background-color: $btn-primary-color;
+  &:hover,&:focus{
+    background-color: lighten($btn-primary-color,10%);
+  }
+}
+
+.btn-subscribe{
+  @include btn-default;
+  background-color: $btn-subscribe-color;
+  &:hover,&:focus{
+    background-color: lighten($btn-subscribe-color,10%);
+  }
+}
+.btn-notApplicable{
+  @include btn-default;
+  background-color: $btn-notApplicable-color;
+  &:hover,&:focus{
+    background-color: lighten($btn-notApplicable-color,10%);
+  }
+}
+.btn-recommended{
+  @include btn-default;
+  background-color: $btn-recommended-color;
+  &:hover,&:focus{
+    background-color: lighten($btn-recommended-color,10%);
+  }
+}

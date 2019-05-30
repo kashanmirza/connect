@@ -1,0 +1,119 @@
+.nav {
+  display: flex; }
+
+.nav-item {
+  border-radius: 8px;
+  box-shadow: inset 1px -1px 0 0 #dbe1e5;
+  background-color: #ecf0f2;
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1; }
+
+.nav-tabs {
+  border-bottom: 0px; }
+  .nav-tabs .nav-item {
+    box-shadow: inset 1px -1px 0 0 #dbe1e5;
+    background-color: #ecf0f2;
+    font-size: 16px;
+    color: #767676;
+    border-radius: 0px;
+    padding: 10px; }
+    .nav-tabs .nav-item.active {
+      box-shadow: 10px 10px 10px transparent;
+      border-right: 0px;
+      border-left: 0px;
+      border-bottom-color: transparent;
+      color: #1dadeb;
+      font-weight: bold; }
+    .nav-tabs .nav-item:first-child {
+      border-radius: 8px 0px 0px 8px; }
+    .nav-tabs .nav-item:last-child {
+      border-radius: 0px 8px 8px 0px; }
+
+.card-container {
+  width: 255px;
+  height: 320px;
+  border-radius: 8px;
+  background-color: #ffffff; }
+
+.serviceCard {
+  width: 25%;
+  padding: 10px; }
+
+.card {
+  display: flex;
+  border-radius: 8px;
+  height: 250px; }
+
+.card-header {
+  background-color: #ffffff;
+  margin: 3px;
+  padding: 5px; }
+
+.card-footer {
+  display: block;
+  border-radius: 8px !important;
+  background-color: #ffffff;
+  border-top: 0px;
+  margin: 0px; }
+
+.card-body {
+  margin: auto;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff; }
+
+.card-img-top {
+  padding: 5px;
+  height: 50px; }
+
+.container {
+  width: 100%; }
+
+.card-image {
+  width: 20px;
+  height: 20px; }
+
+.btn-rounded {
+  line-height: 15px;
+  background-color: #1dadeb;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s; }
+
+.btn-font {
+  font-family: Gotham;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  color: #ffffff; }
+
+.card-img {
+  width: 175px;
+  height: 88px;
+  object-fit: contain; }
+
+.tab-pane {
+  display: block;
+  opacity: 1 !important; }
+
+.tab-content > .active {
+  display: block;
+  opacity: 1; }
+
+.card {
+  border: solid 1px #e2e7ea;
+  border-radius: 8px; }
+  .card .card-header {
+    background-color: #ffffff;
+    border-bottom-color: #e2e7ea; }
+
+/*# sourceMappingURL=css.map */

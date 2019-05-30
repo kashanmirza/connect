@@ -1,0 +1,50 @@
+$backgroundColor : #ffffff;
+
+.card-container{
+  width: 255px;
+  height: 320px;
+  border-radius: 8px;
+  background-color: $backgroundColor;
+}
+
+.serviceCard{
+  width: 25%;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  border-radius: 8px;
+  height: 250px;
+}
+
+
+.card-header{
+  background-color: $backgroundColor;
+  margin:3px;
+  padding: 5px;
+}
+
+.card-footer{
+
+  display: block;
+  border-radius: 8px !important;
+  background-color: $backgroundColor;
+  border-top: 0px;
+  margin : 0px
+}
+
+.card-body{
+  margin: auto;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background: $backgroundColor;
+
+}
+
+
+.card-img-top {
+  padding: 5px;
+  height: 50px;
+}
