@@ -9,7 +9,7 @@ class TabsComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: "SS",
+            id: "01",
             tabData: props.data
         }
     }
@@ -40,12 +40,10 @@ class TabsComponent extends React.Component {
                 <div className="row">
                     <div className="col">
                         <Tabs id="tab" activeKey={this.state.id} onSelect={this.onSelect}>
-                            {
-                                this.state.tabData.map((items) => {
+                            {this.state.tabData && this.state.tabData.map((items) => {
                                 return(<Tab className="tab-content" eventKey={items.id} title={items.tabname}>
                                             <div className="d-flex flex-wrap">
-                                                {
-                                                    items.cardData.map((item) => {
+                                                {items.cardData && items.cardData.map((item) => {
                                                         return(
                                                             <Card
                                                                 image={item.image}

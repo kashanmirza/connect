@@ -4,19 +4,30 @@ import Image from './assets/images/logo.svg';
 import Image2 from './assets/images/image2.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import Dummy from './components/customComponent/tabBar/TabBar'
 import "./components/customComponent/contianer/container.scss";
 
+import TabBar from './components/customComponent/tabBar/TabBar'
 import Tiles from  './components/customComponent/tiles/Tiles';
+import GovText from './components/pages/Login/GovTextComponent'
 
 class App extends React.Component {
     constructor(props){
         super(props);
 
         this.state= {
+            headerTabData : [
+                {
+                    id: "01",
+                    tabname: 'Dashboard'
+                },
+                {
+                    id: "02",
+                    tabname: 'Services Catalog'
+                }
+            ],
             tabData : [
                 {
-                    id: "SS",
+                    id: "01",
                     tabname: 'Smart Service',
                     cardData:[{
                         id:1,
@@ -41,7 +52,7 @@ class App extends React.Component {
                     }]
                 },
                 {
-                    id: "SA",
+                    id: "02",
                     tabname: 'Shared Applications',
                     cardData:[{
                         id:1,
@@ -66,7 +77,7 @@ class App extends React.Component {
                     }]
                 },
                 {
-                    id: "SI",
+                    id: "03",
                     tabname: 'Shared Infrastructure',
                     cardData:[{
                         id:1,
@@ -98,25 +109,30 @@ class App extends React.Component {
   render(){
       return (
           <div className="App">
-              <Container>
+              <div className="top-main-container">
                   <Row>
                       <Col>
-                        <div className="gov-container">
-                            <h1>Government Services</h1>
-                            <p>test test test test test test test test test test test
-                                test test test test test test test test test test test </p>
-                        </div>
+
+                          <Row>
+                              <GovText/>
+                          </Row>
+
+                          <Row>
+                              <TabBar data={this.state.headerTabData}/>
+                          </Row>
+
                       </Col>
                       <Col>
                           <Tiles/>
                       </Col>
                   </Row>
-              </Container>
-              <Container>
+              </div>
+
+              <div className="tab-container">
                   <Row>
-                        <Dummy data={this.state.tabData} click={this.click}/>
+                        <TabBar data={this.state.tabData} click={this.click}/>
                   </Row>
-              </Container>
+              </div>
           </div>
       );
   }

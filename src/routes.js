@@ -6,7 +6,7 @@ import WaitingComponent from './components/theme/waiting';
 import NotFound from './components/common/NotFound';
 
 //components
-const Core = lazy(() => import('./components/pages/core'));
+const Core = lazy(() => import('./components/pages/Login/core'));
 
 class Routes extends Component {
     render() {

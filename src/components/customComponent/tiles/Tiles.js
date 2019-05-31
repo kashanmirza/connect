@@ -8,7 +8,6 @@ import Image2 from "../../../assets/images/image2.png"
 
 
 const Tiles = (props) => {
-
     return (
         <div className="tile-container">
                 <Row>
