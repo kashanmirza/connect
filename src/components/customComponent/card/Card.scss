@@ -36,7 +36,7 @@ $backgroundColor : #ffffff;
 
 .card-body{
   margin: auto;
-  display: block;
+  display: flex;;
   overflow: hidden;
   position: relative;
   background: $backgroundColor;
@@ -48,6 +48,12 @@ $backgroundColor : #ffffff;
   height: 50px;
 }
 
-.tile-container{
-
+.card{
+  border: solid 1px #e2e7ea;
+  border-radius: 8px;
+  display:block;
+  .card-header{
+    background-color: $backgroundColor;
+    border-bottom-color: #e2e7ea;
+  }
 }

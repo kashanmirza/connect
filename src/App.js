@@ -31,7 +31,7 @@ class App extends React.Component {
                     tabname: 'Smart Service',
                     cardData:[{
                         id:1,
-                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title. ",
                         image:Image,
                         btnAction:"isSubscribe"
                     },{
@@ -106,6 +106,10 @@ class App extends React.Component {
     }
 
 
+    click = () => {
+        alert("Modal")
+    };
+
   render(){
       return (
           <div className="App">
@@ -123,7 +127,7 @@ class App extends React.Component {
 
                       </Col>
                       <Col>
-                          <Tiles/>
+                          <Tiles click={this.click}/>
                       </Col>
                   </Row>
               </div>

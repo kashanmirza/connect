@@ -17,6 +17,11 @@ const Details = {
         className:"btn-recommended",
         icon:"",
         title:"Recommended"
+    },
+    isService:{
+        className:"btn-tiles",
+        icon:"fa fa-pencil fa-2x",
+        title:""
     }
 
 }

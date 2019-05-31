@@ -3,7 +3,6 @@
 
 $secondary-color : #26ade3;
 $primary-color: #1dadeb;
-$common-color: #ffffff;
 $center-text-align : center;
 
 
@@ -59,14 +58,7 @@ $center-text-align : center;
 }
 
 
-.card{
-    border: solid 1px #e2e7ea;
-    border-radius: 8px;
-    .card-header{
-        background-color: $common-color;
-        border-bottom-color: #e2e7ea;
-    }
-}
+
 
 
 

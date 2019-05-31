@@ -3,6 +3,7 @@ $btn-recommended-color : #f5ce00;
 $btn-subscribe-color : rgba(38, 186, 126, 0.2);
 $btn-notApplicable-color : rgba(154, 154, 154, 0.2);
 $default-color : #ffffff;
+$tiles-btn-color : #c8e0f0;
 
 @mixin btn-default{
   width:220px;
@@ -49,3 +50,19 @@ $default-color : #ffffff;
     background-color: lighten($btn-recommended-color,10%);
   }
 }
+
+.btn-tiles{
+  float: right;
+  background-color: $default-color;
+  width:32px;
+  height:32px;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  border: 0px;
+  object-fit: contain;
+  .fa{
+    color :$tiles-btn-color
+  }
+}
+

@@ -12,9 +12,9 @@ import btnDetail from '../../../constrant/buttonDetails';
 const RoundedButton = (props) => {
     const { btnAction, click } = props;
 
-    let styleClass= !isEmpty(btnDetail[btnAction].className) ? btnDetail[btnAction].className : "btn-primary";
+    let styleClass= !isEmpty(btnDetail[btnAction].className) ? btnDetail[btnAction].className : "";
     let icon= !isEmpty(btnDetail[btnAction].icon) ? btnDetail[btnAction].icon : "";
-    let title= !isEmpty(btnDetail[btnAction].title) ? btnDetail[btnAction].title : "Subscribe";
+    let title= !isEmpty(btnDetail[btnAction].title) ? btnDetail[btnAction].title : "";
 
     return (
             <button
