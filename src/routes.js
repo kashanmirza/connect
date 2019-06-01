@@ -14,20 +14,24 @@ import NotFound from './components/common/NotFound';
 //page components
 const Core = lazy(() => import('./components/pages/serviceCatalog/ServiceCatalog'));
 const Home = lazy(() => import('./components/pages/home/Home'));
+const Dummy = lazy(() => import('./components/customComponent/form/Form'));
 
 class Routes extends Component {
     render() {
         return (
             <div>
-            <Header/>
-            <Switch>
-            <Route exact path="/" component={WaitingComponent(Home)} />
-            <Route exact path="/serviceCatalog" component={WaitingComponent(Core)} />
-            <Route component={NotFound} />
-            </Switch>
-            <Footer/>
+                <Header/>
+                    <div id="body-wrap" className="body-container">
+                        <Switch>
+                            <Route exact path="/" component={WaitingComponent(Home)} />
+                            <Route exact path="/serviceCatalog" component={WaitingComponent(Core)} />
+                            <Route exact path="/dummy" component={WaitingComponent(Dummy)} />
+                            <Route component={NotFound} />
+                        </Switch>
+                    </div>
+                <Footer/>
             </div>
-    );
+        );
     }
 }
 
