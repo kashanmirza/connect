@@ -4,7 +4,7 @@ import { isEmpty } from "lodash";
 
 import './Button.scss';
 /* eslint-disable */
-import btnDetail from '../../../constrant/buttonDetails';
+import btnDetail from '../../../constant/buttonDetails';
 
 
 

@@ -1,15 +1,31 @@
-import axios from 'axios'
+import { userServices } from '../../services/user';
+import { userConstants } from '../../constant/actionTypes/user';
+import { history } from '../../helpers/history'
 
-export function login(payload) {
-    return (dispatch) => {
-        dispatch({ type: 'LOGIN' });
-        axios.get('http://viacep.com.br/ws/74922800/json/')
-            .then((response) => {
-                dispatch({ type: 'LOGIN_FULFILLED', payload: response.data });
+export const userActions = {
+    login,
+    logout
+};
+
+function login(username,password){
+    return dispatch => {
+        dispatch(request(username));
+        userServices.login(username,password)
+            .then((user) => {
+                dispatch(success(user));
+                history.push('/serviceCatalog');
             })
-            .catch((err) => {
-                dispatch({ type: 'LOGIN_REJECTED', payload: err });
-            });
+            .catch((error)=>{
+                dispatch(failure(error))
+            })
     };
 
+    function request(user){{ return { type: userConstants.LOGIN_REQUEST, payload: user }}}
+    function success(user){{ return { type: userConstants.LOGIN_SUCCESS, payload: user }}}
+    function failure(error){{ return { type: userConstants.LOGIN_FAILURE, payload: error }}}
+}
+
+function logout(){
+    userServices.logout();
+    return { type: userConstants.LOGOUT };
 }

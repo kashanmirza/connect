@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+
+import { userActions } from '../../../redux/actions/user'
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
+
+        this.props.dispatch(userActions.logout());
+
         this.state = {
             username: '',
             password: '',
@@ -24,7 +30,7 @@ class Login extends Component {
         const { username, password } = this.state;
         const { dispatch } = this.props;
         if (username == "Admin" && password == "Admin") {
-            this.props.history.push('/serviceCatalog');
+            this.props.dispatch(userActions.login());
         }
     };
 
@@ -62,4 +68,9 @@ class Login extends Component {
     }
 }
 
-export default Login;
+function mapStateToProps(state){
+    console.log("------------ ", state);
+    return state;
+};
+
+export default connect(mapStateToProps)(Login);
