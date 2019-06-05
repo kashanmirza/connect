@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React, { Component, PureComponent } from 'react';
+import { PropTypes } from 'prop-types';
 import "../../../assets/css/core.scss"
 
 import Image from '../../../assets/images/logo.svg';
@@ -9,7 +9,7 @@ import HomeHeader from './HomeHeader'
 import TabBar from './ServiceCatalogTabBar'
 
 
-class ServiceCatalog extends Component {
+class ServiceCatalog extends PureComponent {
 
     constructor(props) {
         super(props);
@@ -123,5 +123,11 @@ class ServiceCatalog extends Component {
         );
     }
 }
+
+
+ServiceCatalog.propTypes ={
+    headerTabData : PropTypes.array,
+    tabData : PropTypes.array,
+};
 
 export default ServiceCatalog;

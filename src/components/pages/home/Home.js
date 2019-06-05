@@ -5,6 +5,7 @@ import "../../../assets/css/core.scss"
 import HeaderImage from '../../customComponent/Image';
 import Form from '../../customComponent/form/Form';
 
+
 class Home extends Component {
 
     constructor(props) {
@@ -27,7 +28,6 @@ class Home extends Component {
                     </Row>
                 </div>
                 <div className="home-tabBar">
-
                 </div>
             </div>
         );

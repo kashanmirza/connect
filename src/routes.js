@@ -14,7 +14,7 @@ import NotFound from './components/common/NotFound';
 //page components
 const Core = lazy(() => import('./components/pages/serviceCatalog/ServiceCatalog'));
 const Home = lazy(() => import('./components/pages/home/Home'));
-const Dummy = lazy(() => import('./components/customComponent/form/Form'));
+
 
 class Routes extends Component {
     render() {
@@ -25,7 +25,6 @@ class Routes extends Component {
                         <Switch>
                             <Route exact path="/" component={WaitingComponent(Home)} />
                             <Route exact path="/serviceCatalog" component={WaitingComponent(Core)} />
-                            <Route exact path="/dummy" component={WaitingComponent(Dummy)} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
