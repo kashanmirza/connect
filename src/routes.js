@@ -21,7 +21,7 @@ class Routes extends Component {
         return (
             <div>
                 <Header/>
-                    <div id="body-wrap" className="body-container">
+                    <div>
                         <Switch>
                             <Route exact path="/" component={WaitingComponent(Home)} />
                             <Route exact path="/serviceCatalog" component={WaitingComponent(Core)} />

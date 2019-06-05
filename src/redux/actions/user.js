@@ -1,21 +1,20 @@
 import { userServices } from '../../services/user';
 import { userConstants } from '../../constant/actionTypes/user';
-import { history } from '../../helpers/history'
+import history  from '../../helpers/history'
 
-export const userActions = {
-    login,
-    logout
-};
 
-function login(username,password){
+
+export function login(username,password){
     return dispatch => {
         dispatch(request(username));
         userServices.login(username,password)
             .then((user) => {
+                console.log("[User Actions] Login Success ", user);
                 dispatch(success(user));
                 history.push('/serviceCatalog');
             })
             .catch((error)=>{
+                console.log("[User Actions] Login Error ", error);
                 dispatch(failure(error))
             })
     };
@@ -25,7 +24,8 @@ function login(username,password){
     function failure(error){{ return { type: userConstants.LOGIN_FAILURE, payload: error }}}
 }
 
-function logout(){
+export function logout(){
     userServices.logout();
+    console.log("[User Actions] Logout ");
     return { type: userConstants.LOGOUT };
 }

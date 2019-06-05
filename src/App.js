@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-
+import history  from './helpers/history'
 
 import Routes from './routes';
+
 
 class App extends Component {
     render() {
         return (
-            <Router forceRefresh={false}>
-                <div className="body-wrapper">
+            <Router forceRefresh={false} history={history}>
+                <div className="body-wrapper" id="body-container">
                     <Routes/>
                 </div>
             </Router>

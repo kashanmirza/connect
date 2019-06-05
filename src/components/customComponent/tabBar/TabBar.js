@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Col} from  'react-bootstrap';
+import _ from 'lodash';
 import './TabBar.scss';
 
 import Card from "../card/Card";
@@ -16,13 +17,20 @@ class TabsComponent extends React.Component {
 
     componentDidMount() {
 
-        var tabData=  this.state.tabData;
+        let tabData=  this.state.tabData;
+        tabData = this.getCardLength(tabData);
         this.setState({
-            tabData: tabData,
-            component : tabData[0].component
+            tabData: tabData
         });
     }
 
+
+    getCardLength = (tabData) => {
+        tabData.map((obj)=>{
+            obj.len = obj.cardData ? ` (${obj.cardData.length})`: "";
+        });
+        return tabData;
+    }
 
     onSelect = (key) =>{
         this.setState({
@@ -41,7 +49,7 @@ class TabsComponent extends React.Component {
                     <div className="col">
                         <Tabs id="tab" activeKey={this.state.id} onSelect={this.onSelect}>
                             {this.state.tabData && this.state.tabData.map((items) => {
-                                return(<Tab className="tab-content" eventKey={items.id} title={items.tabname}>
+                                return(<Tab className="tab-content" eventKey={items.id} title={items.tabname + items.len}>
                                             <div className="d-flex flex-wrap">
                                                 {items.cardData && items.cardData.map((item) => {
                                                         return(

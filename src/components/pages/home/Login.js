@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom'
 
-import { userActions } from '../../../redux/actions/user'
+import { login, logout } from '../../../redux/actions/user'
+
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
 
-        this.props.dispatch(userActions.logout());
+        this.props.logout();
 
         this.state = {
             username: '',
@@ -28,9 +31,11 @@ class Login extends Component {
         e.preventDefault();
         this.setState({ submitted: true });
         const { username, password } = this.state;
+        this.props.handleSubmit(username,password);
         const { dispatch } = this.props;
         if (username == "Admin" && password == "Admin") {
-            this.props.dispatch(userActions.login());
+            // this.props.history.push("/serviceCatalog");
+            this.props.login(username,password);
         }
     };
 
@@ -58,7 +63,11 @@ class Login extends Component {
 
                             </div>
                             <div className="form-group">
+                                <input type="checkbox" /> <span>Remember me</span>
                                 <button className="btn btn-primary">Login</button>
+                            </div>
+                            <div className='form-footer'>
+                                <p>For help with login and password details. Please contact your IT Support team</p>
                             </div>
                         </form>
                     </div>
@@ -73,4 +82,6 @@ function mapStateToProps(state){
     return state;
 };
 
-export default connect(mapStateToProps)(Login);
+const mapDispatchToProps = dispatch => bindActionCreators({ login, logout }, dispatch);
+
+export default connect(mapStateToProps,mapDispatchToProps)(Login);
