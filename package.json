@@ -22,7 +22,8 @@
     "redux-multi": "^0.1.12",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.20.1"
+    "sass": "^1.20.1",
+    "validator": "^11.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

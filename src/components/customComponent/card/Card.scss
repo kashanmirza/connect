@@ -9,13 +9,26 @@ $backgroundColor : #ffffff;
 
 .serviceCard{
   width: 25%;
-  padding: 10px;
+  // padding: 10px;
 }
 
 .card {
   display: flex;
   border-radius: 8px;
-  height: 250px;
+  height: 270px;
+  margin: 10px 10px;
+  // &:nth-child(1){
+  //   margin: 10px 0px;
+  // }
+  // &:nth-child(2){
+  //   margin: 10px 10px;
+  // }
+  // &:nth-child(3){
+  //   margin: 10px 10px;
+  // }
+  // &:nth-child(4){
+  //   margin: 10px 5px;
+  // }
 }
 
 

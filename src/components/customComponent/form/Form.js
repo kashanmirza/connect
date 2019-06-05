@@ -6,8 +6,34 @@ class Home extends Component {
 
     constructor(props) {
         super(props);
-
+        this.state = {
+            username: '',
+            password: '',
+            submitted: false
+        };
     }
+
+
+
+
+
+
+
+    // handleChange= (e) => {
+    //     const { name, value } = e.target;
+    //     this.setState({ [name]: value });
+    // };
+    //
+    // handleSubmit= (e) => {
+    //     e.preventDefault();
+    //
+    //     this.setState({ submitted: true });
+    //     const { username, password } = this.state;
+    //     const { dispatch } = this.props;
+    //     if (username && password) {
+    //         dispatch(userActions.login(username, password));
+    //     }
+    // };
 
     render() {
         return (

@@ -19,6 +19,7 @@ $backgroundColor : #ffffff;
 
 .nav-tabs{
   border-bottom: 0px;
+  text-align: center;
   .nav-item{
     box-shadow: inset 1px -1px 0 0 #dbe1e5;
     background-color: #ecf0f2;
@@ -35,15 +36,18 @@ $backgroundColor : #ffffff;
       font-weight: bold;
     }
     &:first-child{
-      border-radius: 8px 0px 0px 8px;
+      border-radius: 8px 8px 0px 0px;
     }
     &:last-child{
-      border-radius: 0px 8px 8px 0px;
+      border-radius: 8px 8px 0px 0px;
     }
 
   }
 }
 
+.tab-content{
+  padding: 0px; 
+}
 
 
 

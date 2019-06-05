@@ -1,7 +1,7 @@
 import React, { Component, PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
 import "../../../assets/css/core.scss"
-
+import { Card, Row, Col } from 'react-bootstrap';
 import Image from '../../../assets/images/logo.svg';
 import Image2 from '../../../assets/images/image2.png';
 
@@ -46,6 +46,26 @@ class ServiceCatalog extends PureComponent {
                         btnAction:"isNotApplicable"
                     },{
                         id:4,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:5,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:6,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:7,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:8,
                         text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
                         image:Image,
                         btnAction:"isRecommended"
@@ -113,12 +133,14 @@ class ServiceCatalog extends PureComponent {
     render() {
         return (
             <div className="service-catalog">
+                
                 <div>
                     <HomeHeader headerTabData={this.state.headerTabData}/>
                 </div>
-                <div>
+                <div className="top-space">
                     <TabBar tabData={this.state.tabData} click={this.click}/>
                 </div>
+                
             </div>
         );
     }

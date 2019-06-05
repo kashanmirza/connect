@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab} from  'react-bootstrap';
+import { Tabs, Tab, Col} from  'react-bootstrap';
 import './TabBar.scss';
 
 import Card from "../card/Card";

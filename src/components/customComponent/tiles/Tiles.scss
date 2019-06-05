@@ -1,5 +1,5 @@
 .tile-container{
-  margin-top: 95px;
+  margin-top: 5%;
 }
 
 .gov-container{
@@ -15,7 +15,10 @@ p{
   width: 250px;
 }
 
-.tiles{
-  width: 175px;
-  height: 88px;
-}
+ .tiles{
+   margin: 0.5%;
+   padding: 0%;
+   border-radius: 10px;
+   height: 60px;
+   background-color: #fff;
+ }

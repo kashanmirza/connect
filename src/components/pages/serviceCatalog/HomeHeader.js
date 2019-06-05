@@ -30,20 +30,24 @@ class HomeHeader extends React.Component {
                         </Col>
 
                     </Row>*/}
-                    <Row>
-                        <Col>
-                            <Row>
+                        <Row>
+                            <Col md={4}>
                                 <GovText/>
-                            </Row>
-
-                            <Row>
-                                <TabBar data={this.state.headerTabData}/>
-                            </Row>
-                        </Col>
-                        <Col>
+                            </Col>
+                            
+                            <Col md={2}>
+                            </Col>
+                            
+                            <Col md={6}>
                             <Tiles click={this.state.click}/>
-                        </Col>
-                    </Row>
+                            </Col>
+                        </Row>
+                        
+                        <Row>
+                          <Col md={4}>  
+                                <TabBar data={this.state.headerTabData}/>
+                          </Col>
+                        </Row>
                 </div>
         );
     }

@@ -18,28 +18,25 @@ const Tiles = (props) => {
     return (
         <div className="tile-container">
                 <Row>
-                    <Col>
-                        <div className="tiles">
-                            <Card.Img variant="top" src={Image1} />
-                        </div>
-
+                    <Col className="tiles">        
+                        {/* <Card.Img variant="top" src={Image1} /> */}
                     </Col>
-                    <Col>
-                        <Card.Img variant="top" src={Image1} />
+                    <Col className="tiles">
+                        {/* <Card.Img variant="top" src={Image1} /> */}
                     </Col>
-                    <Col>
-                        <Card.Img variant="top" src={Image1} />
+                    <Col className="tiles">
+                        {/* <Card.Img variant="top" src={Image1} /> */}
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
-                        <Card.Img variant="top" src={Image2} />
+                    <Col className="tiles">
+                        {/* <Card.Img variant="top" src={Image2} /> */}
                     </Col>
-                    <Col>
-                        <Card.Img variant="top" src={Image2} />
+                    <Col className="tiles">
+                        {/* <Card.Img variant="top" src={Image2} /> */}
                     </Col>
-                    <Col>
-                        <Card.Img variant="top" src={Image2} />
+                    <Col className="tiles">
+                        {/* <Card.Img variant="top" src={Image2} /> */}
                     </Col>
                 </Row>
                 <Button btnAction={btnAction} click={click}/>
