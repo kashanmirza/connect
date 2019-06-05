@@ -23,13 +23,7 @@ class HomeHeader extends React.Component {
     render(){
         return (
                 <div className="top-main-container">
-                  {/*  <Row>
-                        <Col>
-                            <GovText/>
-                            <TabBar data={this.state.headerTabData}/>
-                        </Col>
 
-                    </Row>*/}
                         <Row>
                             <Col md={4}>
                                 <GovText/>

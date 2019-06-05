@@ -3,7 +3,7 @@ import { Row, Col} from 'react-bootstrap'
 import "../../../assets/css/core.scss"
 
 import HeaderImage from '../../customComponent/Image';
-import Form from '../../customComponent/form/Form';
+import Login from './Login';
 
 
 class Home extends Component {
@@ -23,7 +23,7 @@ class Home extends Component {
                             <HeaderImage/>
                         </Col>
                         <Col md={6}>
-                            <Form/>
+                            <Login submit={this.handleSubmit} history={this.props.history}/>
                         </Col>
                     </Row>
                 </div>
