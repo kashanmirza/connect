@@ -24,7 +24,7 @@ class Routes extends Component {
                     <div>
                         <Switch>
                             <Route exact path="/" component={WaitingComponent(Home)} />
-                            <Route exact path="/serviceCatalog" component={WaitingComponent(Core)} />
+                            <Route path="/serviceCatalog" component={WaitingComponent(Core)} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>

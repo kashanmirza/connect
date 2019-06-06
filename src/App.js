@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-import history  from './helpers/history'
+import { Route, Link, Router } from 'react-router-dom';
+import { history }  from './helpers/history'
 
 import Routes from './routes';
 

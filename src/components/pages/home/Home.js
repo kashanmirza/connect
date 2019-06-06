@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { Row, Col} from 'react-bootstrap'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+//Components
 import HeaderImage from '../../customComponent/Image';
 import Login from './Login';
-import TabBar from '../serviceCatalog/ServiceCatalogTabBar'
+import TabBar from '../serviceCatalog/ServiceCatalogTabBar';
 
-import "../../../assets/css/core.scss"
+//Actions
+import { login, logout } from '../../../redux/actions/user';
+
+//Assets
+import "../../../assets/css/core.scss";
 import Image from '../../../assets/images/logo.svg';
 import Image2 from '../../../assets/images/image2.png';
 
@@ -13,6 +20,8 @@ class Home extends Component {
 
     constructor(props) {
         super(props);
+
+        this.props.logout();
 
         this.state= {
             headerTabData : [
@@ -129,7 +138,11 @@ class Home extends Component {
         alert("Modal")
     };
 
-
+    handleSubmit= (username,password) => {
+        if (username == "Admin" && password == "Admin") {
+           this.props.login(username,password);
+        }
+    };
 
     render() {
         return (
@@ -156,4 +169,11 @@ class Home extends Component {
     }
 }
 
-export default Home;
+function mapStateToProps(state){
+    console.log("------------ ", state);
+    return state;
+};
+
+const mapDispatchToProps = dispatch => bindActionCreators({ login, logout }, dispatch);
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home);

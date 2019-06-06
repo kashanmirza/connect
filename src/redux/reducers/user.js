@@ -1,18 +1,28 @@
-const INITIAL_STATE = {
-    loading: false,
-    user: {},
-    error: null
-}
+import { userConstants } from '../../constant/actionTypes/user';
 
-export default (state = INITIAL_STATE, action) => {
-    switch (action.type) {
-        case 'LOGIN':
-            return { ...state, loading: true };
-        case 'LOGIN_FULFILLED':
-            return { ...state, loading: false, user: action.payload};
-        case 'LOGIN_REJECTED':
-            return { ...state, loading: false, user: {}, error: action.payload};
+let user = localStorage.getItem('user');
+const initialState = user ? { loggedIn : true, user } : {};
+
+export default (state = initialState ,action) => {
+    switch (action.type){
+        case userConstants.LOGIN_REQUEST:
+            return {
+                loggedIn : true,
+                user: action.payload
+            };
+        case userConstants.LOGIN_SUCCESS:
+            return {
+                loggedIn : true,
+                user: action.payload
+            };
+        case userConstants.LOGIN_FAILURE:
+            return {
+                loggedIn : false,
+                error: action.error
+            };
+        case userConstants.LOGOUT:
+            return {};
         default:
-            return state
+            return state;
     }
 }

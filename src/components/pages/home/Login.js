@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom'
 
 import { login, logout } from '../../../redux/actions/user'
 
@@ -11,8 +10,6 @@ class Login extends Component {
 
     constructor(props) {
         super(props);
-
-        this.props.logout();
 
         this.state = {
             username: '',
@@ -32,11 +29,7 @@ class Login extends Component {
         this.setState({ submitted: true });
         const { username, password } = this.state;
         this.props.handleSubmit(username,password);
-        const { dispatch } = this.props;
-        if (username == "Admin" && password == "Admin") {
-            // this.props.history.push("/serviceCatalog");
-            this.props.login(username,password);
-        }
+
     };
 
     render() {
@@ -77,11 +70,4 @@ class Login extends Component {
     }
 }
 
-function mapStateToProps(state){
-    console.log("------------ ", state);
-    return state;
-};
-
-const mapDispatchToProps = dispatch => bindActionCreators({ login, logout }, dispatch);
-
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default Login;

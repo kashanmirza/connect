@@ -1,6 +1,6 @@
 import { userServices } from '../../services/user';
 import { userConstants } from '../../constant/actionTypes/user';
-import history  from '../../helpers/history'
+import { history }  from '../../helpers/history'
 
 
 
@@ -21,7 +21,7 @@ export function login(username,password){
 
     function request(user){{ return { type: userConstants.LOGIN_REQUEST, payload: user }}}
     function success(user){{ return { type: userConstants.LOGIN_SUCCESS, payload: user }}}
-    function failure(error){{ return { type: userConstants.LOGIN_FAILURE, payload: error }}}
+    function failure(error){{ return { type: userConstants.LOGIN_FAILURE, error: error }}}
 }
 
 export function logout(){

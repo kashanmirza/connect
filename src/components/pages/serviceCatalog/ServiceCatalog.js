@@ -1,13 +1,15 @@
 import React, { Component, PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
-import "../../../assets/css/core.scss"
 import { Card, Row, Col } from 'react-bootstrap';
-import Image from '../../../assets/images/logo.svg';
-import Image2 from '../../../assets/images/image2.png';
 
+//Components
 import HomeHeader from './HomeHeader'
 import TabBar from './ServiceCatalogTabBar'
 
+//Assets
+import "../../../assets/css/core.scss"
+import Image from '../../../assets/images/logo.svg';
+import Image2 from '../../../assets/images/image2.png';
 
 class ServiceCatalog extends PureComponent {
 
