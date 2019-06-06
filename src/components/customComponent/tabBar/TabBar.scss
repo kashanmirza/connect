@@ -45,6 +45,36 @@ $backgroundColor : #ffffff;
   }
 }
 
+.tab-content .nav-tabs{
+  // border-bottom: 0px;
+  text-align: center;
+  .nav-item{
+    // box-shadow: inset 1px -1px 0 0 #dbe1e5;
+    background-color: #ecf0f2;
+    font-size: 16px;
+    color: #767676;
+    border-radius: 0px;
+    padding: 10px;
+    &.active{
+      // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
+      border-right: 0px;
+      border-left: 0px;
+      border-bottom-color: transparent;
+      color: #1dadeb;
+      font-weight: bold;
+    }
+    &:first-child{
+      border-radius: 8px 0px 0px 8px;
+      border: 1px solid !important;
+    }
+    &:last-child{
+      border-radius: 8px 8px 0px 0px;
+      border: 1px solid !important;
+    }
+
+  }
+}
+
 .tab-content{
   padding: 0px; 
 }

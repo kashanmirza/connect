@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 
 import Button from '../button/Button';
 /* eslint-disable */
@@ -19,12 +19,18 @@ const CardBoard = (props) => {
                     <Card.Img variant="top" src={image}/>
                 </Card.Header>
                 <Card.Body>
+                    
+                    
                     <Card.Text>
                         {text}
                     </Card.Text>
+                    
+                    
+                    
+                    
                 </Card.Body>
                 <Card.Footer>
-                    <div className="button">
+                <div className="button">
                     <Button btnAction={btnAction} click={click}></Button>
                     </div>
                 </Card.Footer>

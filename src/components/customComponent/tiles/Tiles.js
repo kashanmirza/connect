@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, Container } from 'react-bootstrap';
 
 import './Tiles.scss';
 /* eslint-disable */
@@ -16,7 +16,7 @@ const Tiles = (props) => {
 
 
     return (
-        <div className="tile-container">
+        <Container className="tile-container">
                 <Row>
                     <Col className="tiles">        
                         {/* <Card.Img variant="top" src={Image1} /> */}
@@ -39,9 +39,9 @@ const Tiles = (props) => {
                         {/* <Card.Img variant="top" src={Image2} /> */}
                     </Col>
                 </Row>
-                <Button btnAction={btnAction} click={click}/>
+                
 
-        </div>
+        </Container>
     )
 };
 

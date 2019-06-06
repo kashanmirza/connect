@@ -42,9 +42,12 @@ $backgroundColor : #ffffff;
 
   display: block;
   border-radius: 8px !important;
-  background-color: $backgroundColor;
   border-top: 0px;
-  margin : 0px
+  background-color: $backgroundColor;
+  margin : 0px;
+  // background-color: rgba(255, 255, 255, 0.8);
+  // margin: -19px 0px 0px 0px;
+  // position: relative;
 }
 
 .card-body{
@@ -53,6 +56,7 @@ $backgroundColor : #ffffff;
   overflow: hidden;
   position: relative;
   background: $backgroundColor;
+  height: 135px;
 
 }
 

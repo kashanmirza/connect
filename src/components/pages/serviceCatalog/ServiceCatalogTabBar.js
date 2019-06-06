@@ -22,7 +22,7 @@ class ServiceCatalogTabBar extends React.Component {
         return (
             <div className="tab-container">
                 <Row>
-                    <TabBar data={this.state.tabData} click={this.state.click}/>
+                    <TabBar className="border" data={this.state.tabData} click={this.state.click}/>
                 </Row>
             </div>
         );

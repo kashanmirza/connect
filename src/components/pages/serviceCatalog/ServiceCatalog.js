@@ -31,7 +31,7 @@ class ServiceCatalog extends PureComponent {
                     tabname: 'Smart Service',
                     cardData:[{
                         id:1,
-                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title. ",
+                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title.Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title. ",
                         image:Image,
                         btnAction:"isSubscribe"
                     },{
