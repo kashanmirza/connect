@@ -17,7 +17,8 @@ class CustomModal extends React.Component {
             <div>
                 <Modal
                     show={show}
-                    onHide={this.handleClose}>
+                    onHide={this.handleClose}
+                >
                     <Modal.Header closeButton>
                         <div style={{height:"70px"}}></div>
                     </Modal.Header>

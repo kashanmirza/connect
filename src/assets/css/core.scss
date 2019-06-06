@@ -99,6 +99,9 @@ $common-color: #ffffff;
 
 }
 
+.modal-content{
+  border-radius: 8px !important;
+}
 
 @media (min-width: 400px){
   .modal-dialog {
