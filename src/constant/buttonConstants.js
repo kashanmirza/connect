@@ -22,6 +22,15 @@ const Details = {
         className:"btn-tiles",
         icon:"fa fa-pencil fa-2x",
         title:""
+    },isSave:{
+        className:"btn-save",
+        icon:"",
+        title:"Save"
+    },
+    isReset:{
+        className:"btn-reset",
+        icon:"",
+        title:"Reset"
     }
 
 }

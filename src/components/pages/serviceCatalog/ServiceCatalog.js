@@ -137,7 +137,7 @@ class ServiceCatalog extends PureComponent {
             <div className="service-catalog">
                 
                 <div>
-                    <HomeHeader headerTabData={this.state.headerTabData}/>
+                    <HomeHeader headerTabData={this.state.headerTabData} tabData={this.state.tabData}/>
                 </div>
                 <div className="top-space">
                     <TabBar tabData={this.state.tabData} click={this.click}/>

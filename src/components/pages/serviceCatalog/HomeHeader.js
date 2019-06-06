@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import CustomButton from '../../customComponent/button/Button';
-import TabBar from '../../customComponent/tabBar/TabBar';
+import TabBar from '../../customComponent/tabBar/ServicesTabBar';
 import Tiles from  '../../customComponent/tiles/Tiles';
 import GovText from '../../pages/serviceCatalog/GovTextComponent';
 import ServicesModal from '../../customComponent/modal/ServicesModal';
@@ -14,7 +14,8 @@ class HomeHeader extends React.Component {
             headerTabData : props.headerTabData,
             click : props.click,
             btnAction : "isService" ,
-            show: false
+            show: false,
+            tabData : props.tabData
         }
     }
 
@@ -59,7 +60,7 @@ class HomeHeader extends React.Component {
                           <CustomButton btnAction={this.state.btnAction} click={() => this.handleShow()}/>
                           </Col>
                         </Row>
-                    <ServicesModal show={this.state.show} handleClose={this.handleClose}/>
+                    <ServicesModal show={this.state.show} handleClose={this.handleClose} tabData={this.state.tabData}/>
                 </div>
         );
     }

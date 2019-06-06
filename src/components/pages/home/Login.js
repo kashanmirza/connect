@@ -28,7 +28,9 @@ class Login extends Component {
         e.preventDefault();
         this.setState({ submitted: true });
         const { username, password } = this.state;
-        this.props.handleSubmit(username,password);
+        if(username && password){
+            this.props.handleSubmit(username,password);
+        }
 
     };
 

@@ -40,7 +40,7 @@ class TabsComponent extends React.Component {
 
     click = () => {
         alert("<<<<<<>>>>>>>>>>")
-    }
+    };
 
     render() {
         return (
@@ -50,22 +50,22 @@ class TabsComponent extends React.Component {
                         <Tabs id="tab" activeKey={this.state.id} onSelect={this.onSelect}>
                             {this.state.tabData && this.state.tabData.map((items) => {
                                 return(<Tab className="tab-content" eventKey={items.id} title={items.tabname + items.len}>
-                                            <div className="d-flex flex-wrap">
-                                                {items.cardData && items.cardData.map((item) => {
-                                                        return(
-                                                            <Card
-                                                                image={item.image}
-                                                                text={item.text}
-                                                                icon={item.icon}
-                                                                btnText={item.btnText}
-                                                                btnAction={item.btnAction}
-                                                                click={this.click}
-                                                            />
-                                                        )})
-                                                }
-                                            </div>
-                                        </Tab>
-                                    )})
+                                        <div className="d-flex flex-wrap">
+                                            {items.cardData && items.cardData.map((item) => {
+                                                return(
+                                                    <Card
+                                                        image={item.image}
+                                                        text={item.text}
+                                                        icon={item.icon}
+                                                        btnText={item.btnText}
+                                                        btnAction={item.btnAction}
+                                                        click={this.click}
+                                                    />
+                                                )})
+                                            }
+                                        </div>
+                                    </Tab>
+                                )})
                             }
                         </Tabs>
                     </div>

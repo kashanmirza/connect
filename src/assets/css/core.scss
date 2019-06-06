@@ -3,7 +3,15 @@ $secondary-color : #26ade3;
 $primary-color: #1dadeb;
 $center-text-align : center;
 $common-color: #ffffff;
+$modal-borders: 0px;
+$border-color: #dfdfdf;
 
+
+@mixin boxShadow {
+  -moz-box-shadow: 0 10px 50px $border-color;
+  -webkit-box-shadow: 0 10px 50px $border-color;
+  box-shadow: -20px 20px 50px -20px $border-color;
+}
 .container{
   width :100%
 }
@@ -99,8 +107,28 @@ $common-color: #ffffff;
 
 }
 
+.service-catalog .top-space{
+  background-color: var(--pale-grey);
+}
+
+
+/* Goes to modal css file*/
 .modal-content{
   border-radius: 8px !important;
+  .modal-header {
+    border-bottom: $modal-borders;
+    height: 70px;
+    .modal-title{
+      margin: 25px 3px;
+    }
+  }
+  .modal-body {
+    height: 900px;
+  }
+  .modal-footer {
+    border-top: $modal-borders;
+    height: 50px;
+  }
 }
 
 @media (min-width: 400px){
@@ -109,5 +137,50 @@ $common-color: #ffffff;
   }
 }
 
+.icon-box {
+  @include boxShadow;
+  width : 206.6px;
+  height:88px;
+  display: block;
+  text-align: center;
+  margin: 5px 5px;
+  background-color: #fff;
+  padding: 25px 50px;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 2vw;
+  border-radius: 3px;
+  border: 1.5px solid;
+  border-style: dashed;
+  border-color: $border-color;
+}
 
+.icon-tile-div{
+  display: inline-flex;
+}
+
+.all-services-div{
+  display: inline-flex;
+  margin: 0px 0px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.all-services{
+  border-right: 1px solid;
+  padding-right: 30px;
+}
+
+.service-choice{
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.tab-container-div{
+  padding: 0px;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: $border-color;
+  margin: 10px;
+}
 

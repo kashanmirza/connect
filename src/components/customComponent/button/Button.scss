@@ -4,6 +4,9 @@ $btn-subscribe-color : rgba(38, 186, 126, 0.2);
 $btn-notApplicable-color : rgba(154, 154, 154, 0.2);
 $default-color : #ffffff;
 $tiles-btn-color : #c8e0f0;
+$modal-btn-save: #26ba7e;
+$modal-btn-reset: #515151;
+
 
 @mixin btn-default{
   width:220px;
@@ -19,6 +22,14 @@ $tiles-btn-color : #c8e0f0;
       line-height: .25em;
     }
   }
+}
+
+@mixin modal-btn{
+  border-radius: 5px;
+  padding: 10px;
+  border: 0px;
+  font-size: 14px;
+  width: -webkit-fill-available;
 }
 
 .btn-primary{
@@ -66,3 +77,23 @@ $tiles-btn-color : #c8e0f0;
   }
 }
 
+.btn-reset{
+  @include modal-btn;
+  width:120px;
+  margin: 5px 0px;
+  background-color: $modal-btn-reset;
+  &:hover,&:focus{
+    background-color: lighten($modal-btn-reset,10%);
+  }
+}
+
+.btn-save{
+  @include modal-btn;
+  width:160px;
+  margin: 5px;
+  margin-left: -20px;
+  background-color: $modal-btn-save;
+  &:hover,&:focus{
+    background-color: lighten($modal-btn-save,10%);
+  }
+}
