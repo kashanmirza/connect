@@ -1,0 +1,11 @@
+.body-wrapper{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Gotham, sans-serifa;
+  font-size: 16px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal
+}
