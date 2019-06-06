@@ -1,27 +1,34 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import Button from '../../customComponent/button/Button'
-import TabBar from '../../customComponent/tabBar/TabBar'
+import CustomButton from '../../customComponent/button/Button';
+import TabBar from '../../customComponent/tabBar/TabBar';
 import Tiles from  '../../customComponent/tiles/Tiles';
-import GovText from '../../pages/serviceCatalog/GovTextComponent'
+import GovText from '../../pages/serviceCatalog/GovTextComponent';
+import ServicesModal from '../../customComponent/modal/ServicesModal';
 
 class HomeHeader extends React.Component {
     constructor(props){
         super(props);
-        
-
         this.state = {
             headerTabData : props.headerTabData,
             click : props.click,
-            btnAction : "isService" 
-            
+            btnAction : "isService" ,
+            show: false
         }
     }
 
 
     click = () => {
         alert("Modal")
+    };
+
+    handleClose= (isShow) =>  {
+        this.setState({ show: isShow });
+    };
+
+    handleShow= () => {
+        this.setState({ show: true });
     };
     
 
@@ -49,9 +56,10 @@ class HomeHeader extends React.Component {
                           <Col md={7}>
                           </Col>
                           <Col md={1}>
-                          <Button btnAction={this.state.btnAction} click={this.state.click}/>
+                          <CustomButton btnAction={this.state.btnAction} click={() => this.handleShow()}/>
                           </Col>
                         </Row>
+                    <ServicesModal show={this.state.show} handleClose={this.handleClose}/>
                 </div>
         );
     }

@@ -93,3 +93,18 @@ $common-color: #ffffff;
   padding: 4% 4%;
   border-radius: 20px;
 }
+
+.fade{
+  opacity: 100;
+
+}
+
+
+@media (min-width: 400px){
+  .modal-dialog {
+    max-width: 1110px;
+  }
+}
+
+
+

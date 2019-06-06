@@ -48,7 +48,7 @@ class Login extends Component {
                 
                 <Row>
                     <div className="form-div">
-                        <form autoComplete="off" onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit}>
                             <Col className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                                 <input type="text" placeholder="Username" className="form-control" name="username" value={username} onChange={this.handleChange} required/>
                             </Col>
