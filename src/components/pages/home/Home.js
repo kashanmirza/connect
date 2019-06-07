@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col} from 'react-bootstrap'
+import { Container, Row, Col} from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -147,20 +147,17 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
-                <div className="home-header">
+                <Container className="home-header">
                     <Row>
-                        <Col md={4}>
+                        <Col md={6}>
                             <HeaderImage/>
-                        </Col>
-
-                        <Col md={2}>
                         </Col>
 
                         <Col md={6}>
                             <Login history={this.props.history} handleSubmit={this.handleSubmit}/>
                         </Col>
                     </Row>
-                </div>
+                </Container>
                 <div className="top-space">
                     <TabBar tabData={this.state.tabData} click={this.click}/>
                 </div>
