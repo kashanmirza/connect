@@ -248,8 +248,7 @@ input[type=checkbox], input[type=radio]{
   height: 370px;      /* equals max image height */
   width: 580px;
   white-space: nowrap; /* this is required unless you put the helper span closely near the img */
-  
-  text-align: center; margin: 1em 0;
+  text-align: center; margin: 2em 0;
 }
 .helper {
   display: inline-block;
@@ -261,4 +260,5 @@ input[type=checkbox], input[type=radio]{
   vertical-align: middle;
   max-height: 370px;
   max-width: 580px;
+  margin-left: -25px;
 }

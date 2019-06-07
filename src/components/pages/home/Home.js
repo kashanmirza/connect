@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col} from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
+import _ from 'lodash';
 //Components
 import HeaderImage from '../../customComponent/Image';
 import Login from './Login';
@@ -13,8 +13,10 @@ import { login, logout } from '../../../redux/actions/user';
 
 //Assets
 import "../../../assets/css/core.scss";
-import Image from '../../../assets/images/logo.svg';
-import Image2 from '../../../assets/images/image2.png';
+
+//constant
+import TabData from '../../../constant/tabConstants/tabs';
+
 
 class Home extends Component {
 
@@ -34,103 +36,7 @@ class Home extends Component {
                     tabname: 'Services Catalog'
                 }
             ],
-            tabData : [
-                {
-                    id: "01",
-                    tabname: 'Smart Service',
-                    cardData:[{
-                        id:1,
-                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title. ",
-                        image:Image,
-                        btnAction:"isSubscribe"
-                    },{
-                        id:2,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isAlreadySubscribed"
-                    },{
-                        id:3,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isNotApplicable"
-                    },{
-                        id:4,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isRecommended"
-                    },{
-                        id:5,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isRecommended"
-                    },{
-                        id:6,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isRecommended"
-                    },{
-                        id:7,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isRecommended"
-                    },{
-                        id:8,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isRecommended"
-                    }]
-                },
-                {
-                    id: "02",
-                    tabname: 'Shared Applications',
-                    cardData:[{
-                        id:1,
-                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image2,
-                        btnAction:"isSubscribe"
-                    },{
-                        id:2,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image2,
-                        btnAction:"isAlreadySubscribed"
-                    },{
-                        id:3,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image2,
-                        btnAction:"isNotApplicable"
-                    },{
-                        id:4,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image2,
-                        btnAction:"isRecommended"
-                    }]
-                },
-                {
-                    id: "03",
-                    tabname: 'Shared Infrastructure',
-                    cardData:[{
-                        id:1,
-                        text:"Some quick example text to build on the card title and make up the bulk of the Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isSubscribe"
-                    },{
-                        id:2,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isAlreadySubscribed"
-                    },{
-                        id:3,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isNotApplicable"
-                    },{
-                        id:4,
-                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
-                        image:Image,
-                        btnAction:"isRecommended"
-                    }]
-                }
-            ]
+            tabData : _.cloneDeep(TabData)
         }
     }
 
@@ -139,7 +45,7 @@ class Home extends Component {
     };
 
     handleSubmit= (username,password) => {
-        if (username == "Admin" && password == "Admin") {
+        if (username && password) {
            this.props.login(username,password);
         }
     };

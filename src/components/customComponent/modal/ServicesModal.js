@@ -36,26 +36,25 @@ class CustomModal extends React.Component {
                         <Container className="icon-tile-div">
                             <Row >
                             <Col  md={2} className="box-border-shadow row-no-padding">
-                            <button id = "x">
-                            &minus;
-        </button>
-                                <IconBox> HELLO </IconBox>
+
+                            <button id = "x">&minus;</button>
+                                <IconBox> CTS </IconBox>
                             </Col>
 
                             <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> HELLO </IconBox>
+                                <IconBox> HM </IconBox>
                             </Col>
                             <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> HELLO </IconBox>
+                                <IconBox> GRP </IconBox>
                             </Col>
                             <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> HELLO </IconBox>
+                                <IconBox> BI </IconBox>
                             </Col>
                             <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> HELLO Baby</IconBox>
+                                <IconBox> ATS </IconBox>
                             </Col>
                             <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> HELLO Baby</IconBox>
+                                <IconBox> OM </IconBox>
                             </Col>
                             </Row>
                         </Container>

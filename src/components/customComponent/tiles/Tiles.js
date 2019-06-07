@@ -19,24 +19,24 @@ const Tiles = (props) => {
         <Container className="tile-container">
                 <Row>
                     <Col className="tiles">        
-                        {/* <Card.Img variant="top" src={Image1} /> */}
+                        <Card.Img variant="top" src={Image1} />
                     </Col>
                     <Col className="tiles">
-                        {/* <Card.Img variant="top" src={Image1} /> */}
+                        <Card.Img variant="top" src={Image1} />
                     </Col>
                     <Col className="tiles">
-                        {/* <Card.Img variant="top" src={Image1} /> */}
+                        <Card.Img variant="top" src={Image1} />
                     </Col>
                 </Row>
                 <Row>
                     <Col className="tiles">
-                        {/* <Card.Img variant="top" src={Image2} /> */}
+                        <Card.Img variant="top" src={Image1} />
                     </Col>
                     <Col className="tiles">
-                        {/* <Card.Img variant="top" src={Image2} /> */}
+                        <Card.Img variant="top" src={Image1} />
                     </Col>
                     <Col className="tiles">
-                        {/* <Card.Img variant="top" src={Image2} /> */}
+                        <Card.Img variant="top" src={Image1} />
                     </Col>
                 </Row>
                 
