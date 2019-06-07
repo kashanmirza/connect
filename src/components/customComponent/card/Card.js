@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, CardImg, CardText, CardBody, CardHeader, CardFooter } from 'reactstrap';
 
 import Button from '../button/Button';
 /* eslint-disable */
@@ -15,25 +15,21 @@ const CardBoard = (props) => {
     return (
         <div className="serviceCard">
             <Card>
-                <Card.Header>
-                    <Card.Img variant="top" src={image}/>
-                </Card.Header>
-                <Card.Body>
-                    
-                    
-                    <Card.Text>
+                <CardHeader>
+                    <CardImg variant="top" src={image}/>
+                </CardHeader>
+                <CardBody>
+
+                    <CardText>
                         {text}
-                    </Card.Text>
-                    
-                    
-                    
-                    
-                </Card.Body>
-                <Card.Footer>
+                    </CardText>
+
+                </CardBody>
+                <CardFooter>
                 <div className="button">
                     <Button btnAction={btnAction} click={click}></Button>
                     </div>
-                </Card.Footer>
+                </CardFooter>
             </Card>
         </div>
     );

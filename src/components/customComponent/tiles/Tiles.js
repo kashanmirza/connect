@@ -7,7 +7,7 @@ import Image1 from "../../../assets/images/image1.png";
 import Image2 from "../../../assets/images/image2.png";
 
 import Button from '../button/Button'
-
+import IconBox from '../iconBox/IconBox';
 
 const Tiles = (props) => {
 
@@ -17,29 +17,9 @@ const Tiles = (props) => {
 
     return (
         <Container className="tile-container">
-                <Row>
-                    <Col className="tiles">        
-                        <Card.Img variant="top" src={Image1} />
-                    </Col>
-                    <Col className="tiles">
-                        <Card.Img variant="top" src={Image1} />
-                    </Col>
-                    <Col className="tiles">
-                        <Card.Img variant="top" src={Image1} />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="tiles">
-                        <Card.Img variant="top" src={Image1} />
-                    </Col>
-                    <Col className="tiles">
-                        <Card.Img variant="top" src={Image1} />
-                    </Col>
-                    <Col className="tiles">
-                        <Card.Img variant="top" src={Image1} />
-                    </Col>
-                </Row>
-                
+           <IconBox>
+               <img src={Image1}/>
+           </IconBox>
 
         </Container>
     )
