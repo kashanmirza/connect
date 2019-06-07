@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container , Row, Col, Modal } from 'react-bootstrap';
+import { Container , Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import CustomButton from '../../customComponent/button/Button';
 import IconBox from '../iconBox/IconBox';
 import TabBar from '../tabBar/ServicesTabBar';
@@ -24,38 +24,36 @@ class CustomModal extends React.Component {
         return (
             <Container>
                 <Modal
-                    show={show}
-                    onHide={this.handleClose}
+                    isOpen={show}
+                    onClick={this.handleClose}
                 >
-                    <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter">
-                            Highlighted Services
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
+                    <ModalHeader toggle={this.handleClose}>
+                        Highlighted Services
+                    </ModalHeader>
+                    <ModalBody>
                         <Container className="icon-tile-div">
                             <Row >
-                            <Col  md={2} className="box-border-shadow row-no-padding">
+                                <Col  md={2} className="box-border-shadow row-no-padding">
 
-                            <button id = "x">&minus;</button>
-                                <IconBox> CTS </IconBox>
-                            </Col>
+                                    <button id = "x">&minus;</button>
+                                    <IconBox> CTS </IconBox>
+                                </Col>
 
-                            <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> HM </IconBox>
-                            </Col>
-                            <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> GRP </IconBox>
-                            </Col>
-                            <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> BI </IconBox>
-                            </Col>
-                            <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> ATS </IconBox>
-                            </Col>
-                            <Col md={2} className="box-border-shadow row-no-padding">
-                                <IconBox> OM </IconBox>
-                            </Col>
+                                <Col md={2} className="box-border-shadow row-no-padding">
+                                    <IconBox> HM </IconBox>
+                                </Col>
+                                <Col md={2} className="box-border-shadow row-no-padding">
+                                    <IconBox> GRP </IconBox>
+                                </Col>
+                                <Col md={2} className="box-border-shadow row-no-padding">
+                                    <IconBox> BI </IconBox>
+                                </Col>
+                                <Col md={2} className="box-border-shadow row-no-padding">
+                                    <IconBox> ATS </IconBox>
+                                </Col>
+                                <Col md={2} className="box-border-shadow row-no-padding">
+                                    <IconBox> OM </IconBox>
+                                </Col>
                             </Row>
                         </Container>
                         <div className="all-services-div">
@@ -69,19 +67,19 @@ class CustomModal extends React.Component {
                         <div className="tab-container-div">
                             <TabBar data={tabData}/>
                         </div>
-                    </Modal.Body>
-                    <Modal.Footer>
+                    </ModalBody>
+                    <ModalFooter>
                         <div className="footer-div">
-                        <Row>
-                            <Col>
-                                <CustomButton btnAction={this.state.isReset}/>
-                            </Col>
-                            <Col>
-                                <CustomButton btnAction={this.state.isSave}/>
-                            </Col>
-                        </Row>
+                            <Row>
+                                <Col>
+                                    <CustomButton btnAction={this.state.isReset}/>
+                                </Col>
+                                <Col>
+                                    <CustomButton btnAction={this.state.isSave}/>
+                                </Col>
+                            </Row>
                         </div>
-                    </Modal.Footer>
+                    </ModalFooter>
                 </Modal>
 
             </Container>

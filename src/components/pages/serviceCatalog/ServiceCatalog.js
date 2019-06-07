@@ -41,7 +41,6 @@ class ServiceCatalog extends PureComponent {
     render() {
         return (
             <div className="service-catalog">
-                
                 <div>
                     <HomeHeader headerTabData={this.state.headerTabData} tabData={this.state.tabData}/>
                 </div>
