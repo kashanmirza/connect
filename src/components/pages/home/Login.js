@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Form, Row, Col, Button, InputGroup } from 'react-bootstrap';
+import { Row, Col, InputGroup } from 'reactstrap';
 
 import { login, logout } from '../../../redux/actions/user'
 import "../../../assets/css/core.scss"
-
+import Button from '../../customComponent/button/Button'
 
 
 class Login extends Component {
@@ -16,8 +16,8 @@ class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            submitted: false
-            // btnAction: 'isLogin'
+            submitted: false,
+            btnAction: 'isLogin'
 
         };
     }
@@ -73,7 +73,7 @@ class Login extends Component {
                                             </Row>    
                                     </Col>
                                     <Col md={5}>
-                                    <button className="btn btn-primary">Login</button>
+                                    <Button btnAction={this.state.btnAction}/>
                                     </Col>
                                 </Row>
                                 

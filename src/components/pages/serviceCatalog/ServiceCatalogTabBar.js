@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from '../../../assets/images/logo.svg';
 import Image2 from '../../../assets/images/image2.png';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 import TabBar from '../../customComponent/tabBar/ServicesTabBar'
 import Tiles from  '../../customComponent/tiles/Tiles';

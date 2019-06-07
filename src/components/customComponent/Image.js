@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col } from 'react-bootstrap';
+import { Col } from 'reactstrap';
 
 /* eslint-disable */
 

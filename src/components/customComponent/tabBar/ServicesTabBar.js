@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Col} from  'react-bootstrap';
+import { Tabs, Tab } from  'react-bootstrap';
 import _ from 'lodash';
 import './TabBar.scss';
 
