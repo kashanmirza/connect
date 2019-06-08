@@ -31,6 +31,11 @@ const Details = {
         className:"btn-reset",
         icon:"",
         title:"Reset"
+    },
+    isLogin:{
+        className:"btn-login",
+        icon:"",
+        title:"Login"
     }
 
 }

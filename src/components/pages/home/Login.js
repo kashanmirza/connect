@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Form, Row, Col, Button, InputGroup } from 'react-bootstrap';
 
 import { login, logout } from '../../../redux/actions/user'
+import "../../../assets/css/core.scss"
+
 
 
 class Login extends Component {
@@ -15,6 +17,8 @@ class Login extends Component {
             username: '',
             password: '',
             submitted: false
+            // btnAction: 'isLogin'
+
         };
     }
 
@@ -52,21 +56,23 @@ class Login extends Component {
                     <div className="form-div">
                         <form onSubmit={this.handleSubmit}>
                             <Col className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                                <input type="text" placeholder="Username" className="form-control" name="username" value={username} onChange={this.handleChange} required/>
+                                <InputGroup>
+                                <input type="text" placeholder="Username" className="form-control user" name="username" value={username} onChange={this.handleChange} required/>
+                                </InputGroup>
                             </Col>
                             <Col className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                                <input type="password" placeholder="Password" className="form-control" name="password" value={password} onChange={this.handleChange} required/>
+                                <input type="password" placeholder="Password" className="form-control user" name="password" value={password} onChange={this.handleChange} required/>
 
                             </Col>
                             <Col className="form-group">
-                                <Row>
-                                    <Col md={6}>
-                                    <label>
-                                    <input type="checkbox" /> <span>Remember Me</span>
-                                    </label>
-                                    
+                                <Row className="">
+                                    <Col md={7}>
+                                        <Row className="vertical">
+                                            <Col md={2}><input type="checkbox" /></Col>
+                                            <Col md={8}><p className="remem">Remember Me</p> </Col>
+                                            </Row>    
                                     </Col>
-                                    <Col md={{ span: 4, offset: 2 }}>
+                                    <Col md={5}>
                                     <button className="btn btn-primary">Login</button>
                                     </Col>
                                 </Row>
@@ -74,7 +80,7 @@ class Login extends Component {
                             </Col>
                             <hr/>
                             <Col className='form-footer'>
-                                <p>For help with login and password details. Please contact your IT Support team</p>
+                                <p className="txt-center">For help with login and password details. Please contact your IT Support team</p>
                             </Col>
                         </form>
                     </div>

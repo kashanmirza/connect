@@ -40,6 +40,14 @@ $modal-btn-reset: #515151;
   }
 }
 
+.btn-login{
+  @include btn-default;
+   background-color: #1dadeb;
+   &:hover,&:focus{
+     background-color: lighten(#1dadeb,10%);
+   }
+ }
+
 .btn-subscribe{
   @include btn-default;
   background-color: $btn-subscribe-color;

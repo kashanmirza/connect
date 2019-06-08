@@ -75,14 +75,14 @@ $border-color: #dfdfdf;
 .form-container{
   // margin-left: 15%;
   // margin-top: 20px;
-  margin: 10%;
+  margin: 0% 10%;
 }
 
 .form-header-div{
   display: block;
   padding: 10px;
   width: 100%;
-  padding: 0% 10%;
+  // padding: 0% 20% 0% 0%;
 }
 .top-space{
   margin-top: 20px;
@@ -96,10 +96,9 @@ $border-color: #dfdfdf;
   font-size: 3.5rem;
 }
 .form-div{
-  margin: 3% 10%;
   background-color: #f9f9f9;
-  padding: 4% 4%;
-  border-radius: 20px;
+    padding: 6% 4%;
+    border-radius: 20px;
 }
 
 .fade{
@@ -139,20 +138,22 @@ $border-color: #dfdfdf;
 
 .icon-box {
   @include boxShadow;
-  width : 206.6px;
-  height:88px;
+  // width : 206.6px;
+  box-shadow: -20px 20px 50px -20px #dfdfdf;
+  height: 88px;
   display: block;
   text-align: center;
+  min-width: 170px;
   margin: 5px 5px;
   background-color: #fff;
-  padding: 25px 50px;
+  padding: 25px 10%;
   box-sizing: border-box;
   color: #000;
-  font-size: 2vw;
+  font-size: 20px;
   border-radius: 3px;
   border: 1.5px solid;
   border-style: dashed;
-  border-color: $border-color;
+  border-color: #dfdfdf;
 }
 
 .icon-tile-div{
@@ -184,3 +185,80 @@ $border-color: #dfdfdf;
   margin: 10px;
 }
 
+.user{
+  padding: 20px;
+  font-size: 12px;
+  border: 2px solid #eee;
+  border-radius: 15px !important;
+  background: #f9f9f9;
+}
+input[type=checkbox], input[type=radio]{
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+.remem{
+  margin: 0%;
+  padding: 5px 1px; 
+}
+.vertical{
+  padding: 5px;
+}
+.txt-center{
+  text-align: center;
+}
+.col-half{
+  margin-left:3.0% ;
+}
+#x {
+  position: relative;
+  float: right;
+  background: red;
+  color: white;
+  padding: -40px;
+  top: 3px;
+  font-weight: bold;
+    width: 25px;
+    height: 20px;
+    margin-top: -4px;
+  border-radius: 75%;
+  border: none;
+  right: -10px;
+  z-index: 5;
+}
+@media only screen and (max-width: 600px) {
+  #x {
+    position: relative;
+    float: right;
+    background: red;
+    color: white;
+    top: 0px;
+    right: 0px;
+    
+  }
+}
+.row-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.modal-content .modal-body{
+  height: auto;
+}
+.img-box {
+  height: 370px;      /* equals max image height */
+  width: 580px;
+  white-space: nowrap; /* this is required unless you put the helper span closely near the img */
+  
+  text-align: center; margin: 1em 0;
+}
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.img-box img {
+  background: #3A6F9A;
+  vertical-align: middle;
+  max-height: 370px;
+  max-width: 580px;
+}

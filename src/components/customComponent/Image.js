@@ -1,17 +1,19 @@
 import React from "react";
-import { Card } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 
 /* eslint-disable */
 
 import image from  '../../assets/images/logo.svg'
+import "../../assets/css/core.scss"
 
 
 const HeaderImage = (props) => {
 
     return (
-        <div >
-            <img src={image} />
-        </div>
+        <Col className="img-box">
+            <span className="helper"></span>
+            <img src={image}  fluid/>
+        </Col>
     );
 };
 

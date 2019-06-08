@@ -71,6 +71,26 @@ class ServiceCatalog extends PureComponent {
                         text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
                         image:Image,
                         btnAction:"isRecommended"
+                    },{
+                        id:9,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:10,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:11,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
+                    },{
+                        id:12,
+                        text:"Some quick example text to build on the card title and make up the bulk of the card's content.This is some extra text for testing.",
+                        image:Image,
+                        btnAction:"isRecommended"
                     }]
                 },
                 {

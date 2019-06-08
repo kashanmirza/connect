@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Button, Modal } from 'react-bootstrap';
+import { Container , Row, Col, Button, Modal } from 'react-bootstrap';
 import CustomButton from '../../customComponent/button/Button';
 import IconBox from '../iconBox/IconBox';
 import TabBar from '../tabBar/ServicesTabBar';
@@ -22,7 +22,7 @@ class CustomModal extends React.Component {
         const { show, tabData } = this.props;
 
         return (
-            <div>
+            <Container>
                 <Modal
                     show={show}
                     onHide={this.handleClose}
@@ -33,27 +33,32 @@ class CustomModal extends React.Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <div className="icon-tile-div">
-                            <div className="box-border-shadow">
+                        <Container className="icon-tile-div">
+                            <Row >
+                            <Col  md={2} className="box-border-shadow row-no-padding">
+                            <button id = "x">
+                            &minus;
+        </button>
                                 <IconBox> HELLO </IconBox>
-                            </div>
+                            </Col>
 
-                            <div className="box-border-shadow">
+                            <Col md={2} className="box-border-shadow row-no-padding">
                                 <IconBox> HELLO </IconBox>
-                            </div>
-
-                            <div className="box-border-shadow">
+                            </Col>
+                            <Col md={2} className="box-border-shadow row-no-padding">
                                 <IconBox> HELLO </IconBox>
-                            </div>
-
-                            <div className="box-border-shadow">
+                            </Col>
+                            <Col md={2} className="box-border-shadow row-no-padding">
                                 <IconBox> HELLO </IconBox>
-                            </div>
-
-                            <div className="box-border-shadow">
-                                <IconBox> HELLO </IconBox>
-                            </div>
-                        </div>
+                            </Col>
+                            <Col md={2} className="box-border-shadow row-no-padding">
+                                <IconBox> HELLO Baby</IconBox>
+                            </Col>
+                            <Col md={2} className="box-border-shadow row-no-padding">
+                                <IconBox> HELLO Baby</IconBox>
+                            </Col>
+                            </Row>
+                        </Container>
                         <div className="all-services-div">
                             <div className="all-services">
                                 <h3>All Services</h3>
@@ -80,7 +85,7 @@ class CustomModal extends React.Component {
                     </Modal.Footer>
                 </Modal>
 
-            </div>
+            </Container>
         );
     }
 }
