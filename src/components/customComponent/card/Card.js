@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardImg, CardText, CardBody, CardHeader, CardFooter } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardHeader, CardFooter, Col } from 'reactstrap';
 
 import Button from '../button/Button';
 /* eslint-disable */
@@ -13,7 +13,7 @@ const CardBoard = (props) => {
     const { btnText, btnAction, image, icon, click, text } = props;
 
     return (
-        <div className="serviceCard">
+        <Col md={3} className="serviceCard">
             <Card>
                 <CardHeader>
                     <CardImg variant="top" src={image}/>
@@ -31,7 +31,7 @@ const CardBoard = (props) => {
                     </div>
                 </CardFooter>
             </Card>
-        </div>
+        </Col>
     );
 };
 

@@ -3,13 +3,17 @@
   height: auto;
   width: 200px;
 }
+.tile-container img{
+  height: 100%;
+  // width: 100%;
+}
 
 .gov-container{
-  padding: 40px 0px 0px 22px;
-  width: 361px;
-  height: 250px;
+  padding: 50px 0px 0px 0px;
+  // width: 361px;
+  // height: 250px;
   /* margin: 19px; */
-  display: flex;
+  // display: flex;
   word-wrap: break-word;
 }
 
@@ -27,3 +31,22 @@
    width: 100px;
    flex-wrap: wrap;
  }
+ .gov-tiles{
+  box-shadow: -20px 20px 50px -20px #dfdfdf;
+  height: 88px;
+  display: block;
+  text-align: center;
+  // min-width: 170px;
+  margin: 4px 3px;
+  background-color: #fff;
+  padding: 10px 10%;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 20px;
+  border-radius: 10px;
+  border-color: #dfdfdf;
+ }
+ .row-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}

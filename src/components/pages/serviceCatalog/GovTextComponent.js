@@ -1,16 +1,26 @@
 import React from "react";
-
+import { Card, Row, Col, Container } from 'react-bootstrap';
 
 
 
 
 const GovText = (props) => {
     return (
-       <div className="gov-container">
+       <Container className="gov-container">
+           
+           <Col>
            <h1>Government Services</h1>
+           </Col>
+           
+           
+           
+           <Col>
            <p>test test test test test test test test test test test
                test test test test test test test test test test test </p>
-       </div>
+           </Col>
+           
+           
+       </Container>
     );
 };
 

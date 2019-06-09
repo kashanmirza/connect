@@ -17,9 +17,38 @@ const Tiles = (props) => {
 
     return (
         <Container className="tile-container">
-           <IconBox>
-               <img src={Image1}/>
-           </IconBox>
+                
+           <Col md={4} className="row-no-padding">
+            <div className="gov-tiles">
+               <img src={Image1} fluid/>
+            </div>
+           </Col>
+           <Col md={4} className="row-no-padding">
+            <div className="gov-tiles">
+               <img src={Image1} fluid/>
+            </div>
+           </Col>
+           <Col md={4} className="row-no-padding">
+            <div className="gov-tiles">
+               <img src={Image1} fluid/>
+            </div>
+           </Col>
+           <Col md={4} className="row-no-padding">
+            <div className="gov-tiles">
+               <img src={Image1} fluid/>
+            </div>
+           </Col>
+           <Col md={4} className="row-no-padding">
+            <div className="gov-tiles">
+               <img src={Image1} fluid/>
+            </div>
+           </Col>
+           <Col md={4} className="row-no-padding">
+            <div className="gov-tiles">
+               <img src={Image1} fluid/>
+            </div>
+           </Col>
+           
 
         </Container>
     )
